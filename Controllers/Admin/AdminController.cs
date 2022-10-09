@@ -14,7 +14,12 @@ namespace AD.Controllers.Admin
             return View();
         }
 
-        public ActionResult Signin()
+        public ActionResult Dashboard()
+        {
+            return View();
+        }
+
+        public ActionResult TeamOwner()
         {
             return View();
         }
