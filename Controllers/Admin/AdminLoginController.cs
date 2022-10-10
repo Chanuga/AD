@@ -85,7 +85,10 @@ namespace AD.Controllers.Admin
             //return View("Dashboard");
         }
 
-
+        public IActionResult CreateTrophy()
+        {
+            return View();
+        }
 
     }
 }
