@@ -90,5 +90,32 @@ namespace AD.Controllers.Admin
             return View();
         }
 
+        [HttpPost]
+        public IActionResult CreateNewTrophy()
+        {
+            //Console.WriteLine("SignIn", signIn.UserName, signIn.Email, signIn.Password, signIn.PhoneNumber);
+            //return View();
+
+            //connectionString();
+            //con.Open();
+            //com.Connection = con;
+            //com.CommandText = "INSERT INTO Admin (user_name, password, email, phone_number) VALUES ('" + signIn.UserName + "', '" + signIn.Password + "', '" + signIn.Email + "', '" + signIn.PhoneNumber + "') ";
+            //dr = com.ExecuteReader();
+            //con.Close();
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreateANewTrophy(Trophy trophy)
+        {
+            connectionString();
+            con.Open();
+            com.Connection = con;
+            com.CommandText = "INSERT INTO Trophy (trophy_name, start_date, end_date, teams) VALUES ('" + trophy.Name + "', '" + trophy.StartDate + "', '" + trophy.EndDate + "', '" + trophy.Teams + "') ";
+            dr = com.ExecuteReader();
+            con.Close();
+            return View("CreateTrophy");
+        }
+
     }
 }
