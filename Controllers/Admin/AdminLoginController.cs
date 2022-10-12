@@ -90,6 +90,22 @@ namespace AD.Controllers.Admin
             return View();
         }
 
+        public IActionResult CreateNewTrophyV1()
+        {
+            var t = new List<Trophy>();
+            for(int i = 1; i < 11; i++)
+            {
+                t.Add(item: new Trophy()
+                {
+                    Name = "test ${i}",
+                    EndDate = "2022-10",
+                    StartDate = "2022-12",
+                    Teams = 8
+                });
+            }
+            return View(t);
+        }
+
         [HttpPost]
         public IActionResult CreateNewTrophy()
         {
@@ -116,6 +132,8 @@ namespace AD.Controllers.Admin
             con.Close();
             return View("CreateTrophy");
         }
+
+        
 
     }
 }
