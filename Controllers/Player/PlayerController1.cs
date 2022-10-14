@@ -19,7 +19,7 @@ namespace AD.Controllers
 
         void connectionString()
         {
-            con.ConnectionString = "Data Source=DESKTOP-HBTQOKA;Initial Catalog=ESPORTS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            con.ConnectionString = "Data Source=LDW-LAP;Initial Catalog=ESPORTS;Integrated Security=True";
         }
 
         [HttpPost]

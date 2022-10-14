@@ -22,7 +22,7 @@ namespace AD.Controllers.Admin
 
         void connectionString()
         {
-            con.ConnectionString = "Data Source=DESKTOP-ES9JH7P;Initial Catalog=ESPORTS;Integrated Security=True";
+            con.ConnectionString = "Data Source=LDW-LAP;Initial Catalog=ESPORTS;Integrated Security=True";
         }
 
         [HttpPost]
