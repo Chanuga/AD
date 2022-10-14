@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using AD.Models.Admin;
 using System.Data.SqlClient;
+using System.Data.Sql;
+using System.Data.SqlClient;
 
 namespace AD.Controllers.Admin
 {
@@ -13,6 +15,7 @@ namespace AD.Controllers.Admin
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
+        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-ES9JH7P;Initial Catalog=ESPORTS;Integrated Security=True");
 
         [HttpGet]
         public IActionResult Login()
@@ -92,17 +95,47 @@ namespace AD.Controllers.Admin
 
         public IActionResult CreateNewTrophyV1()
         {
+            //var t = new List<Trophy>();
+            //for(int i = 1; i < 11; i++)
+            //{
+            //    t.Add(item: new Trophy()
+            //    {
+            //        Name = "test ${i}",
+            //        EndDate = "2022-10",
+            //        StartDate = "2022-12",
+            //        Teams = 8
+            //    });
+            //}
+            //return View(t);
+
             var t = new List<Trophy>();
-            for(int i = 1; i < 11; i++)
+
+            String constr = "Data Source=DESKTOP-ES9JH7P;Initial Catalog=ESPORTS;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(constr))
             {
-                t.Add(item: new Trophy()
+                connection.Open();
+                String sql = "SELECT * FROM Trophy";
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
                 {
-                    Name = "test ${i}",
-                    EndDate = "2022-10",
-                    StartDate = "2022-12",
-                    Teams = 8
-                });
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Trophy tro = new Trophy();
+                            tro.ID = reader.GetInt32(0);
+                            tro.Name = reader.GetString(1);
+                            tro.StartDate = reader.GetDateTime(2).ToString();
+                            tro.EndDate = reader.GetDateTime(3).ToString();
+                            tro.Teams = reader.GetInt32(4);
+
+                            t.Add(tro);
+                        }
+                    }
+                }
             }
+
             return View(t);
         }
 
@@ -132,8 +165,6 @@ namespace AD.Controllers.Admin
             con.Close();
             return View("CreateTrophy");
         }
-
-        
 
     }
 }
