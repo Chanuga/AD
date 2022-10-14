@@ -124,6 +124,7 @@ namespace AD.Controllers.Admin
                         while (reader.Read())
                         {
                             Trophy tro = new Trophy();
+                            tro.ID = reader.GetInt32(0);
                             tro.Name = reader.GetString(1);
                             tro.StartDate = reader.GetDateTime(2).ToString();
                             tro.EndDate = reader.GetDateTime(3).ToString();
@@ -164,8 +165,6 @@ namespace AD.Controllers.Admin
             con.Close();
             return View("CreateTrophy");
         }
-
-        
 
     }
 }
