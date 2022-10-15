@@ -4,7 +4,7 @@
     ViewData["Title"] = "CreateNewTrophyV1";
 }
 
-<h1 class="">Trophies</h1>
+<h1 class="mt-5 text-white">Trophies</h1>
 
 <p>
     @*<a asp-action="CreateNewTrophy">Create New</a>*@
@@ -15,16 +15,16 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.Name)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.StartDate)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.EndDate)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.Teams)
             </th>
             <th></th>
@@ -33,24 +33,34 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.Name)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.StartDate)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.EndDate)
             </td>
-            <td>
+            <td class="text-white">@*  *@
                 @Html.DisplayFor(modelItem => item.Teams)
             </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            <td class="text-white">
+                <form action="DeleteT" method="post">
+                    <input type="hidden" name="id" value="@Html.DisplayFor(modelItem => item.ID)" id="form2Example1" class="form-control" />
+                    <button>
+                        Delete
+                    </button>
+                </form>
+                @*@Html.ActionLink("Edit", "EditTrophy", new { id = item.ID }) |
+                @@Html.ActionLink("Details", "Details", new {  id=item.PrimaryKey  }) |
+                @Html.ActionLink("Delete", "DeleteTrophy", new { })*@
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<div>
+    <a asp-action="Dashboard">Back</a>
+</div>

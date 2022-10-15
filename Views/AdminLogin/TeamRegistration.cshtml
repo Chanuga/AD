@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AD.Models.Admin.Team>
+
+@{
+    ViewData["Title"] = "TeamRegistration";
+}
+
+<h1 class="mt-5 text-white">Team Registration Process</h1>
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.MaxPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="text-white">
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td class="text-white">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td class="text-white">
+                    @Html.DisplayFor(modelItem => item.MaxPrice)
+                </td>
+                <td class="text-white">
+                    <form action="EditTeamBasePrice" method="post">
+                        <input type="hidden" name="id" value="@Html.DisplayFor(modelItem => item.ID)" id="form2Example1" class="form-control" />
+                        <input type="hidden" name="FirstName" value="@Html.DisplayFor(modelItem => item.Name)" id="form2Example1" class="form-control" />
+                        <button>
+                            Edit
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Dashboard">Back</a>
+</p>

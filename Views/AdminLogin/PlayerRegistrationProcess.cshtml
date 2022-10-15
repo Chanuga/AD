@@ -1,0 +1,82 @@
+﻿@model IEnumerable<AD.Models.Admin.Player>
+
+@{
+    ViewData["Title"] = "PlayerRegistrationProcess";
+}
+
+<h1 class="mt-5 text-white">Player Registration Process</h1>
+
+<p>
+    @*<a asp-action="Create">Create New</a>*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.BasePrice)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.TrophyRegistered)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.BasePrice)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.TrophyRegistered)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td class="text-white">
+                <form action="EditPlayerBasePrice" method="post">
+                    <input type="hidden" name="id" value="@Html.DisplayFor(modelItem => item.ID)" id="form2Example1" class="form-control" />
+                    <input type="hidden" name="FirstName" value="@Html.DisplayFor(modelItem => item.FirstName)" id="form2Example1" class="form-control" />
+                    <button>
+                        Edit
+                    </button>
+                </form>
+                @*<form action="PlayerBasePrice" method="post">
+                    <input type="hidden" name="id" value="@Html.DisplayFor(modelItem => item.ID)" id="form2Example1" class="form-control" />
+                    <button>
+                        Delete
+                    </button>
+                </form>*@
+                @*@Html.ActionLink("Edit", "EditPlayerBasePrice()", new { /* id=item.PrimaryKey */ }) |*@
+                @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                @*@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Dashboard">Back</a>
+</div>

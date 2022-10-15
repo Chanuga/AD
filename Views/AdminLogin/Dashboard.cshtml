@@ -10,24 +10,41 @@
 <div class="container mt-5 ">
     <h1 class="text-center text-white">Admin Dashboard</h1>
 
-    <form action="CreateAdmin" method="post">
-        <!-- Email input -->
-        @*<div class="form-outline mb-4">
-            <input type="text" name="UserName" id="form2Example1" class="form-control" />
-            <label class="form-label" for="form2Example1">Email address</label>
-        </div>*@
+        @*<form action="CreateAdmin" method="post">
+            <input type="submit" class="btn btn-secondary btn-lg" value="Create New Admin" />
+        </form>
 
-        <!-- Password input -->
-        @*<div class="form-outline mb-4">
-            <input type="password" name="Password" id="form2Example2" class="form-control" />
-            <label class="form-label" for="form2Example2">Password</label>
-        </div>*@
+        <form action="CreateNewTrophyV1" method="post">
+            <input type="submit" class="btn btn-secondary btn-lg" value="Trophy" />
+        </form>*@
 
-        <!-- Submit button -->
-        <input type="submit" value="Create New Admin" />
-    </form>
-
-    <form action="CreateNewTrophyV1" method="post">
-        <input type="submit" value="Trophy" />
-    </form>
+    <div class="container px-4 text-center">
+        <div class="row gx-5">
+            <div class="col">
+                <form action="CreateAdmin" method="post">
+                    <input type="submit" class="btn btn-secondary btn-lg" value="Create New Admin" />
+                </form>
+            </div>
+            <div class="col">
+                <form action="CreateNewTrophyV1" method="post">
+                    <input type="submit" class="btn btn-secondary btn-lg" value="Trophy" />
+                </form>
+            </div>
+            <div class="col">
+                <form action="AuctionList" method="post">
+                    <input type="submit" class="btn btn-secondary btn-lg" value="Auction" />
+                </form>
+            </div>
+            <div class="col">
+                <form action="PlayerRegistration" method="post">
+                    <input type="submit" class="btn btn-secondary btn-lg" value="Player Registration" />
+                </form>
+            </div>
+            <div class="col">
+                <form action="TeamRegistration" method="post">
+                    <input type="submit" class="btn btn-secondary btn-lg" value="Team Registration" />
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

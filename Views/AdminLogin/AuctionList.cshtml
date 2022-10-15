@@ -1,0 +1,63 @@
+﻿@model IEnumerable<AD.Models.Admin.PlayerAuction>
+
+@{
+    ViewData["Title"] = "AuctionList";
+}
+
+<h1 class="mt-5 text-white">Auction List</h1>
+
+<p>
+    <a asp-action="CreateAuction">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.ID)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.AuctionName)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.StartDate)
+            </th>
+            <th class="text-white">
+                @Html.DisplayNameFor(model => model.EndDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.AuctionName)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.StartDate)
+            </td>
+            <td class="text-white">
+                @Html.DisplayFor(modelItem => item.EndDate)
+            </td>
+            <td class="text-white">
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                <form action="AddPlayersToTeams" method="post">
+                    <input type="hidden" name="id" value="@Html.DisplayFor(modelItem => item.ID)" id="form2Example1" class="form-control" />
+                    <button>
+                        Edit
+                    </button>
+                </form>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div>
+    <a asp-action="Dashboard">Back</a>
+</div>

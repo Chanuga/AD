@@ -1,0 +1,45 @@
+﻿@model AD.Models.Admin.PlayerAuction
+
+@{
+    ViewData["Title"] = "CreateAuction";
+}
+
+<h1 class="mt-5 text-white">Create Auction</h1>
+
+@*<h4>PlayerAuction</h4>*@
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateNewAuction">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID" class="control-label text-white" hidden></label>
+                <input asp-for="ID" class="form-control" hidden/>
+                <span asp-validation-for="ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AuctionName" class="control-label text-white"></label>
+                <input asp-for="AuctionName" class="form-control" />
+                <span asp-validation-for="AuctionName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label text-white"></label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label text-white"></label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="AuctionList">Back to List</a>
+</div>
+

@@ -1,0 +1,40 @@
+﻿@model AD.Models.Admin.Team
+
+@{
+    ViewData["Title"] = "EditTeamBasePrice";
+}
+
+<h1 class="mt-5 text-white">Edit Team Base Price</h1>
+
+<h4>Team</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AddTeamBasePrice">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ID" class="control-label text-white"></label>
+                <input asp-for="ID" class="form-control" />
+                <span asp-validation-for="ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label text-white"></label>
+                <input asp-for="Name" class="form-control" value="Name"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxPrice" class="control-label text-white"></label>
+                <input asp-for="MaxPrice" class="form-control" />
+                <span asp-validation-for="MaxPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
