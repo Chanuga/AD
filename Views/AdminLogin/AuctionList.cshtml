@@ -7,7 +7,7 @@
 <h1 class="mt-5 text-white">Auction List</h1>
 
 <p>
-    <a asp-action="CreateAuction">Create New</a>
+    <a asp-action="CreateAuction" class="btn btn-primary">Create New</a>
 </p>
 <table class="table">
     <thead>
@@ -48,7 +48,7 @@
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
                 <form action="AddPlayersToTeams" method="post">
                     <input type="hidden" name="id" value="@Html.DisplayFor(modelItem => item.ID)" id="form2Example1" class="form-control" />
-                    <button>
+                    <button class="btn btn-warning">
                         Edit
                     </button>
                 </form>
