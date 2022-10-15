@@ -1,0 +1,90 @@
+﻿@model AD.Models.Player.Player
+@{
+    ViewData["Title"] = "PlayerEditPlayer";
+    Layout = "~/Views/Shared/_PlayerLayout.cshtml";
+}
+<h4>Player</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="PlayerEditPlayer">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="pemail" class="control-label"></label>
+                <input asp-for="pemail" class="form-control" />
+                <span asp-validation-for="pemail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="playename" class="control-label"></label>
+                <input asp-for="playename" class="form-control" />
+                <span asp-validation-for="playename" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="password" class="control-label"></label>
+                <input asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="repassword" class="control-label"></label>
+                <input asp-for="repassword" class="form-control" />
+                <span asp-validation-for="repassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="age" class="control-label"></label>
+                <input asp-for="age" class="form-control" />
+                <span asp-validation-for="age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pimg" class="control-label"></label>
+                <input asp-for="pimg" class="form-control" />
+                <span asp-validation-for="pimg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bowler_or_batman" class="control-label"></label>
+                <input asp-for="bowler_or_batman" class="form-control" />
+                <span asp-validation-for="bowler_or_batman" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="battingstyle" class="control-label"></label>
+                <input asp-for="battingstyle" class="form-control" />
+                <span asp-validation-for="battingstyle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="bowlingstyle" class="control-label"></label>
+                <input asp-for="bowlingstyle" class="form-control" />
+                <span asp-validation-for="bowlingstyle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="mtaches" class="control-label"></label>
+                <input asp-for="mtaches" class="form-control" />
+                <span asp-validation-for="mtaches" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="witckets" class="control-label"></label>
+                <input asp-for="witckets" class="form-control" />
+                <span asp-validation-for="witckets" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="runs" class="control-label"></label>
+                <input asp-for="runs" class="form-control" />
+                <span asp-validation-for="runs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="previous_cup" class="control-label"></label>
+                <input asp-for="previous_cup" class="form-control" />
+                <span asp-validation-for="previous_cup" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="PlayerDashboard">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
