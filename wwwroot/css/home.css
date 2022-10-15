@@ -1,5 +1,5 @@
 ﻿body {
-    background: linear-gradient(92.04deg,#18184a 24.18%,#19398a 50.95%,#18184a 110.32%);
+    background-color: white;
 }
 
 
@@ -16,14 +16,36 @@
 }
 
 img.main-logo {
-    width: 275px;
-    height: 325px;
+    width: 379px;
+    height: 338px;
+    margin-left: -343px;
+    margin-top: -4px;
+}
+img.cricket {
+    width: 467px;
+    height: 478px;
+    margin-left: 1038px;
+    margin-top: -500px;
+}
+img.main-logoo {
+    width: 867px;
+    height: 390px;
+    margin-left: -100px;
+    margin-top: -69px;
+}
+img.aboutus {
+    width: 1054px;
+    height: 474px;
+    margin-left: -466px;
+    margin-top: -69px;
 }
 
+
 img.team-logo {
-    border-radius: 40%;
-    width: 120px;
-    height: 100px;
+   
+    width: 237px;
+    height: 218px;
+    margin-top: 95px;
 }
 
 .footer-copy{
@@ -32,4 +54,22 @@ img.team-logo {
 
 .ft-copy {
     text-align: center;
+}
+.welcome {
+    font-size: 65px;
+    margin-left: 551px;
+    margin-top: 11px;
+    position: absolute;
+}
+.carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -58px;
+}
+.carousel-innerrr {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: -108px;
 }
