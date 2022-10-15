@@ -1,0 +1,79 @@
+﻿@model IEnumerable<AD.Models.Player.Player>
+@{
+    ViewData["Title"] = "PlayerWatchList";
+    Layout = "~/Views/Shared/_PlayerLayout.cshtml";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.playename)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pimg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bowler_or_batman)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.battingstyle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.bowlingstyle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mtaches)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.witckets)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.runs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.previous_cup)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.playename)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pimg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bowler_or_batman)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.battingstyle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.bowlingstyle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.mtaches)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.witckets)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.runs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.previous_cup)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

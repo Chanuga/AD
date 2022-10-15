@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "PlayerDashboard";
+    Layout = "~/Views/Shared/_PlayerLayout.cshtml";
+}
+
+<style>
+    #icon{
+        margin-top: 20px;
+        font-size: 50px;
+        color: #0026ff;
+    }
+    #icon:hover{
+        color: red;
+        font-size: 60px;
+    }
+    .card{
+        margin-bottom: 25px;
+    }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" integrity="sha512-F5QTlBqZlvuBEs9LQPqc1iZv2UMxcVXezbHzomzS6Df4MZMClge/8+gXrKw2fl5ysdk4rWjR0vKS7NNkfymaBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+<div class="container mt-5 pt-5">
+    <div class="row">
+    <div class="col-sm-12">
+        <h1 class="text-center">E-Sports Player Dashboard</h1>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-lg-3">
+        <div class="card" style="height: 200px;">
+            <div class="card-body">
+                <h2 style="text-align: center;">Player Profile</h2>
+                <div style="text-align: center;">
+                    <a class="navbar-brand" asp-area="" asp-controller="NewPlayers" asp-action="PlayerEditPlayer"><i id="icon" class="fa fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card" style="height: 200px;">
+            <div class="card-body">
+                <h2 style="text-align: center;">Player List</h2>
+                <div style="text-align: center;">
+                    <a class="navbar-brand" asp-area="" asp-controller="NewPlayers" asp-action="PlayerWatchList"><i id="icon" class="fa fa-user"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3">
+        <div class="card" style="height: 200px;">
+            <div class="card-body">
+                <h2 style="text-align: center;">Sold Players</h2>
+                <div style="text-align: center;">
+                    <i id="icon" class="fa fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-lg-3">
+        <div class="card" style="height: 200px;">
+            <div class="card-body">
+                <h2 style="text-align: center;">UnSold Players</h2>
+                <div style="text-align: center;">
+                    <i id="icon" class="fa fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewData["Title"] = "PlayerLogin";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+ <link rel="stylesheet" href="~/css/adminlogin.css" />
+</head>
+ 
+
+
+<div class="container mt-5 px-5 py-5">
+    <h1 class="text-center mt-5 px-5 py-2 text-white">Player Login</h1>
+    <h3 style="color:red" class="text-center pb-3">@Html.ViewData["message"]</h3>
+    <div class="row">
+         <div class="col-md-3">
+             </div>
+        <div class="col-md-6">
+             <form action="PlayerLogin" method="post" name="playerlogin">
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+            <input type="email" name="pemail" id="form2Example1" class="form-control" required="" />
+            <label class="form-label text-white" for="form2Example1">Email address</label>
+        </div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+            <input type="password" name="password" id="form2Example2" class="form-control" required="" />
+            <label class="form-label text-white" for="form2Example2">Password</label>
+        </div>
+
+        <!-- Submit button -->
+        <input type="submit" value="LOGIN" class="btn btn-success"/>
+         <input type="reset" value="Cancel" class="btn btn-success"/>
+         
+    </form>
+        </div>
+    <div class="col-md-3">
+          <a class="navbar-brand" asp-area="" asp-controller="NewPlayers" asp-action="PlayerReg">Register Now!</a>
+        </div>
+    </div>
+</div>
