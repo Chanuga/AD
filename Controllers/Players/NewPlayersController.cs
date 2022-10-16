@@ -110,10 +110,10 @@ namespace AD.Controllers.Players
             connectionString();
             con.Open();
             com.Connection = con;
-            com.CommandText = "INSERT INTO Player (pemail,playename,password,age,pimg,bowler_or_batman,battingstyle,bowlingstyle,mtaches,witckets,runs,previous_cup,thropy) VALUES ('" + nplayer.pemail + "', '" + nplayer.playename + "', '" + nplayer.password + "', '" + nplayer.age + "' , '" + nplayer.pimg + "', '" + nplayer.bowler_or_batman + "','" + nplayer.battingstyle + "',  '" + nplayer.bowlingstyle + "',  '" + nplayer.mtaches + "',  '" + nplayer.witckets + "', '" + nplayer.runs + "', '" + nplayer.previous_cup + "' ) ";
+            com.CommandText = "INSERT INTO Player (pemail,playename,password,age,pimg,bowler_or_batman,battingstyle,bowlingstyle,mtaches,witckets,runs,previous_cup,thropy) VALUES ('" + nplayer.pemail + "', '" + nplayer.playename + "', '" + nplayer.password + "', '" + nplayer.age + "' , '" + nplayer.pimg + "', '" + nplayer.bowler_or_batman + "','" + nplayer.battingstyle + "',  '" + nplayer.bowlingstyle + "',  '" + nplayer.mtaches + "',  '" + nplayer.witckets + "', '" + nplayer.runs + "', '" + nplayer.previous_cup + "', '" + nplayer.thropy + "' ) ";
             dr = com.ExecuteReader();
             con.Close();
-            ViewData["Message"] = "Player Record" + nplayer.playename + "Is Saved Successfully !";
+            ViewData["Message"] = "Player Record  " +  nplayer.playename + "Is Saved Successfully !";
             return View();
         }
 

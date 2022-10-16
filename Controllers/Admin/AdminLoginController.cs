@@ -15,7 +15,7 @@ namespace AD.Controllers.Admin
         SqlConnection con = new SqlConnection();
         SqlCommand com = new SqlCommand();
         SqlDataReader dr;
-        SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-ES9JH7P;Initial Catalog=ESPORTS;Integrated Security=True");
+        SqlConnection conn = new SqlConnection(@"Data Source=LDW-LAP;Initial Catalog=ESPORTS;Integrated Security=True");
 
         [HttpGet]
         public IActionResult Login()
@@ -25,7 +25,7 @@ namespace AD.Controllers.Admin
 
         void connectionString()
         {
-            con.ConnectionString = "Data Source=DESKTOP-ES9JH7P;Initial Catalog=ESPORTS;Integrated Security=True";
+            con.ConnectionString = "Data Source=LDW-LAP;Initial Catalog=ESPORTS;Integrated Security=True";
         }
 
         [HttpPost]
@@ -115,7 +115,7 @@ namespace AD.Controllers.Admin
 
             var t = new List<Trophy>();
 
-            String constr = "Data Source=DESKTOP-ES9JH7P;Initial Catalog=ESPORTS;Integrated Security=True";
+            String constr = "Data Source=LDW-LAP;Initial Catalog=ESPORTS;Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(constr))
             {
@@ -186,7 +186,7 @@ namespace AD.Controllers.Admin
 
             var player = new List<Player>();
 
-            String constr = "Data Source=DESKTOP-ES9JH7P;Initial Catalog=ESPORTS;Integrated Security=True";
+            String constr = "Data Source=LDW-LAP;Initial Catalog=ESPORTS;Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(constr))
             {
@@ -239,7 +239,7 @@ namespace AD.Controllers.Admin
         {
             var playerAuction = new List<PlayerAuction>();
 
-            String constr = "Data Source=DESKTOP-ES9JH7P;Initial Catalog=ESPORTS;Integrated Security=True";
+            String constr = "Data Source=LDW-LAP;Initial Catalog=ESPORTS;Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(constr))
             {
@@ -288,7 +288,7 @@ namespace AD.Controllers.Admin
         {
             var playerAuction = new List<PlayerAuction>();
 
-            String constr = "Data Source=DESKTOP-ES9JH7P;Initial Catalog=ESPORTS;Integrated Security=True";
+            String constr = "Data Source=LDW-LAP;Initial Catalog=ESPORTS;Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(constr))
             {
@@ -342,7 +342,7 @@ namespace AD.Controllers.Admin
         {
             var team = new List<Team>();
 
-            String constr = "Data Source=DESKTOP-ES9JH7P;Initial Catalog=ESPORTS;Integrated Security=True";
+            String constr = "Data Source=LDW-LAP;Initial Catalog=ESPORTS;Integrated Security=True";
 
             using (SqlConnection connection = new SqlConnection(constr))
             {

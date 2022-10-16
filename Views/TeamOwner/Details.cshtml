@@ -1,0 +1,59 @@
+﻿@model IEnumerable<AD.Models.Teamowner.Teamow>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>PlayerList</h1>
+
+<p>
+    <a asp-action="TeamowCreate">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.teamow_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teamow_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.team_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teamow_email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.teamow_contact)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.teamow_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teamow_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.team_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teamow_email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.teamow_contact)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.teamow_id }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.teamow_id  }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.teamow_id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

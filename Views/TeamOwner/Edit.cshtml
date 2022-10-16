@@ -1,0 +1,53 @@
+﻿@model AD.Models.Teamowner.Teamow
+
+<h4>Teamow</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            
+            <div class="form-group">
+                <label asp-for="teamow_name" class="control-label"></label>
+                <input asp-for="teamow_name" class="form-control" />
+                <span asp-validation-for="teamow_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="team_name" class="control-label"></label>
+                <input asp-for="team_name" class="form-control" />
+                <span asp-validation-for="team_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="teamow_email" class="control-label"></label>
+                <input asp-for="teamow_email" class="form-control" />
+                <span asp-validation-for="teamow_email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="teamow_contact" class="control-label"></label>
+                <input asp-for="teamow_contact" class="form-control" />
+                <span asp-validation-for="teamow_contact" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="password" class="control-label"></label>
+                <input asp-for="password" class="form-control" />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="repassword" class="control-label"></label>
+                <input asp-for="repassword" class="form-control" />
+                <span asp-validation-for="repassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
