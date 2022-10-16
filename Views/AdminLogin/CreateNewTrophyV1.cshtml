@@ -9,7 +9,7 @@
 <p>
     @*<a asp-action="CreateNewTrophy">Create New</a>*@
     <form action="CreateNewTrophy" method="post">
-        <input type="submit" value="Create Trophy" />
+        <input type="submit" value="Create Trophy" class="btn btn-success"/>
     </form>
 </p>
 <table class="table">
@@ -48,7 +48,7 @@
             <td class="text-white">
                 <form action="DeleteT" method="post">
                     <input type="hidden" name="id" value="@Html.DisplayFor(modelItem => item.ID)" id="form2Example1" class="form-control" />
-                    <button>
+                    <button class="btn btn-danger">
                         Delete
                     </button>
                 </form>
