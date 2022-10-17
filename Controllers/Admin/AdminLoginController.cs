@@ -44,9 +44,9 @@ namespace AD.Controllers.Admin
             else
             {
                 con.Close();
-                return View("HomePage");
+                ViewData["message"] = "User Name or Password incorrect!";
             }
-            //return View();
+            return View("Login");
         }
 
         public IActionResult Dashboard()
@@ -263,7 +263,7 @@ namespace AD.Controllers.Admin
                     }
                 }
             }
-            return View(playerAuction);
+            return View(playerAuction);2..jh
         }
 
         public IActionResult CreateAuction()

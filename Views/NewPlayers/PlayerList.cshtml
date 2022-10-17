@@ -4,7 +4,7 @@
     ViewData["Title"] = "PlayerList";
 }
 
-<h1>PlayerList</h1>
+<h1 class="mt-5 text-white">PlayerList</h1>
 
 <p>
     <a asp-action="PlayerCreate">Create New</a>
@@ -12,47 +12,39 @@
 <table class="table">
     <thead>
         <tr>
-             <th>
+             <th class="text-white">
                 @Html.DisplayNameFor(model => model.playerID)
             </th>
 
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.pemail)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.playename)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.repassword)
-            </th>
-            <th>
+            </th class="text-white">
+            
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.age)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.pimg)
-            </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.bowler_or_batman)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.battingstyle)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.bowlingstyle)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.mtaches)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.witckets)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.runs)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.previous_cup)
             </th>
             <th></th>
@@ -61,49 +53,40 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.playerID)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.pemail)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.playename)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.password)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.repassword)
-            </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.age)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.pimg)
-            </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.bowler_or_batman)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.battingstyle)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.bowlingstyle)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.mtaches)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.witckets)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.runs)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.previous_cup)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.ActionLink("Edit", "PlayerEdit", new { playerID=item.playerID}) |
 
                 @Html.ActionLink("Details", "Details", new { playerID=item.playerID }) |

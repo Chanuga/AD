@@ -3,25 +3,33 @@
     ViewData["Title"] = "Login";
 }
 
-@*<div class="container mt-5 ">
+<div class="container mt-5 px-5 py-5">
     <h1 class="text-center mt-5 px-5 py-5 text-white">ADMIN LOGIN</h1>
-
+    <h3 style="color:red" class="text-center pb-3">@Html.ViewData["message"]</h3>
+    <div class="row">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
     <form action="VerifyCredntials" method="post">
         <div class="form-outline mb-4">
             <input type="text" name="UserName" id="form2Example1" class="form-control" />
-            <label class="form-label" for="form2Example1">Email address</label>
+            <label class="form-label text-white" for="form2Example1">Username</label>
         </div>
 
         <div class="form-outline mb-4">
             <input type="password" name="Password" id="form2Example2" class="form-control" />
-            <label class="form-label" for="form2Example2">Password</label>
+            <label class="form-label text-white" for="form2Example2">Password</label>
         </div>
 
-        <input type="submit" value="LOGIN" />
+        <input type="submit" value="LOGIN" class="btn btn-success"/>
     </form>
-</div>*@
+</div>
+        <div class="col-md-3">
+        </div>
+    </div>
+</div>
 
-<div class="container mt-5 px-5 py-5">
+@*<div class="container mt-5 px-5 py-5">
     <h1 class="text-center mt-5 px-5 py-5 text-white">ADMIN LOGIN</h1>
     <div class="row">
         <div class="col-md-3">
@@ -30,8 +38,8 @@
             <form action="VerifyCredntials" method="post">
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                    <input type="email" name="UserName" id="form2Example1" class="form-control" required/>
-                    <label class="form-label text-white" for="form2Example1">Email address</label>
+                     <input type="text" name="UserName" id="form2Example1" class="form-control"  required/>
+                    <label class="form-label text-white" for="form2Example1">User Name</label>
                 </div>
 
                 <!-- Password input -->
@@ -47,5 +55,5 @@
         <div class="col-md-3">
         </div>
     </div>
-</div>
+</div>*@
 

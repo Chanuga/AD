@@ -4,7 +4,7 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>PlayerList</h1>
+<h1 class="mt-5 text-white">PlayerList</h1>
 
 <p>
     <a asp-action="TeamowCreate">Create New</a>
@@ -12,19 +12,19 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.teamow_id)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.teamow_name)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.team_name)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.teamow_email)
             </th>
-            <th>
+            <th class="text-white">
                 @Html.DisplayNameFor(model => model.teamow_contact)
             </th>
             <th></th>
@@ -33,22 +33,22 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.teamow_id)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.teamow_name)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.team_name)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.teamow_email)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.DisplayFor(modelItem => item.teamow_contact)
             </td>
-            <td>
+            <td class="text-white">
                 @Html.ActionLink("Edit", "Edit", new {  id=item.teamow_id }) |
                 @Html.ActionLink("Details", "Details", new {  id=item.teamow_id  }) |
                 @Html.ActionLink("Delete", "Delete", new { id=item.teamow_id })

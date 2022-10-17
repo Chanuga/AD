@@ -116,24 +116,30 @@
                     </div>
                 </div>
             </div>
-
-            @*<div class="col">
-                <form action="TeamRegistration" method="post">
-                    <input type="submit" class="btn btn-secondary btn-lg" value="Team Registration" />
-                </form>
+            </div>
+            <div class="row gx-5">
+             <div class="col-lg-3">
+                <div class="card" style="height: 200px;">
+                    <div class="card-body">
+                        <h2 style="text-align: center;">View Players</h2>
+                        <div style="text-align: center;">
+                            <a class="navbar-brand" asp-area="" asp-controller="NewPlayers" asp-action="PlayerList"><i id="icon" class="fa fa-user"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="col">
-                <form asp-controller="NewPlayers" asp-action="PlayerList">
-                    <input type="submit" class="btn btn-secondary btn-lg" value="View Players" />
-                </form>
+             <div class="col-lg-3">
+                <div class="card" style="height: 200px;">
+                    <div class="card-body">
+                        <h2 style="text-align: center;">View Team Owner</h2>
+                        <div style="text-align: center;">
+                            <a class="navbar-brand" asp-area="" asp-controller="TeamOwner" asp-action="Details"><i id="icon" class="fa fa-user"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-             <div class="col">
-                <form asp-controller="TeamOwner" asp-action="Details">
-                    <input type="submit" class="btn btn-secondary btn-lg" value="View Team Owner" />
-                </form>
             </div>
-        </div>
     </div>
 </div>

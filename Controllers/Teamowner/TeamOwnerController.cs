@@ -41,7 +41,7 @@ namespace AD.Controllers.Teamowner
         }
 
 
-        //Player verify
+        //Player verify (login)
         [HttpPost]
         public IActionResult TeamOwnerLogin(Teamow teamlog)
         {
@@ -64,7 +64,7 @@ namespace AD.Controllers.Teamowner
             return View();
         }
 
-        // GET: TeamOwnerController/Details/5
+        // GET: TeamOwnerController/Details/5 (view)
         public ActionResult Details(int id)
         {
             var teamowlist = new List<Teamow>();

@@ -7,6 +7,7 @@ namespace AD.Models.Teamowner
 {
     public class Teamow
     {
+        //Attributes
         public int teamow_id { get; set; }
 
         [Required(ErrorMessage = "Please Enter Team Owner Name !")]

@@ -4,12 +4,12 @@
     ViewData["Title"] = "EditTrophy";
 }
 
-<h1>EditTrophy</h1>
+<h1 class="mt-5 text-white">EditTrophy</h1>
 
 <h4>Trophy</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 text-white">
         <form asp-action="EditTrophy">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -17,22 +17,22 @@
                 <input asp-for="ID" class="form-control" />
                 <span asp-validation-for="ID" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group text-white">
                 <label asp-for="Name" class="control-label"></label>
                 <input asp-for="Name" class="form-control" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group text-white">
                 <label asp-for="StartDate" class="control-label"></label>
                 <input asp-for="StartDate" class="form-control" />
                 <span asp-validation-for="StartDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group text-white">
                 <label asp-for="EndDate" class="control-label"></label>
                 <input asp-for="EndDate" class="form-control" />
                 <span asp-validation-for="EndDate" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group text-white">
                 <label asp-for="Teams" class="control-label"></label>
                 <input asp-for="Teams" class="form-control" />
                 <span asp-validation-for="Teams" class="text-danger"></span>
